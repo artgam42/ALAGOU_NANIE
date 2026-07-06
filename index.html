@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="ALAGOU NANIE – Service traiteur d'exception et produits artisanaux faits maison. Épices, sauces, chips artisanales et douceurs traditionnelles des Antilles.">
+  <meta name="keywords"
+    content="traiteur, épices, cuisine antillaise, chips artisanales, sauce piquante, produits artisanaux, fridòdòy">
+  <title>ALAGOU NANIE – Le goût de l'authenticité</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg" href="images/alagou_nanie_fav.svg">
+</head>
+
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader-logo"><img src="images/alagou_nanie_fav.svg" alt="ALAGOU NANIE"
+        style="height: 250px; width: auto;"></div>
+    <!-- <div class="loader-bar"></div> -->
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <div class="logo" onclick="navigateTo('accueil')">
+        <img src="images/alagou_nanie.png" alt="ALAGOU NANIE" style="height: 50px; width: auto;">
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil" data-page="accueil" class="active"
+            onclick="navigateTo('accueil'); closeMenu();">Accueil</a></li>
+        <li><a href="#traiteur" data-page="traiteur" onclick="navigateTo('traiteur'); closeMenu();">Traiteur</a></li>
+        <li><a href="#epices" data-page="epices" onclick="navigateTo('epices'); closeMenu();">Épices &amp; Sauces</a>
+        </li>
+        <li><a href="#fridodoy" data-page="fridodoy" onclick="navigateTo('fridodoy'); closeMenu();">Fridòdòy</a></li>
+        <li><a href="#contact-section" class="nav-cta" onclick="scrollToFooter(); closeMenu();">Contact</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE 1: ACCUEIL ============ -->
+  <div class="page active" id="page-accueil">
+
+    <!-- HERO -->
+    <section class="hero" id="hero-section">
+      <div class="hero-bg">
+        <img src="images/hero_buffet.png" alt="Buffet traiteur ALAGOU NANIE" loading="eager">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <!-- <div class="hero-badge">Service Traiteur & Produits Artisanaux</div> -->
+        <h1>Le goût de l'<span class="gold-text">authenticité</span>, l'art de vous <span
+            class="gold-text">régaler</span>.
+        </h1>
+        <p class="hero-description">
+          ALAGOU NANIE réinvente vos moments gourmands à travers son service traiteur d'exception et sa gamme de
+          produits artisanaux faits maison.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="navigateTo('traiteur')">
+            Découvrir notre Service Traiteur
+            <span class="btn-icon">→</span>
+          </button>
+          <button class="btn btn-secondary" onclick="navigateTo('fridodoy')">
+            Voir nos Produits
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUI SOMMES-NOUS -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper animate-on-scroll">
+            <img src="images/about_hands.png" alt="Préparation artisanale d'épices" loading="lazy">
+          </div>
+          <div class="about-text animate-on-scroll delay-2">
+            <h3>« Bienvenue chez ALAGOU NANIE. »</h3>
+            <p>
+              Plus qu'une cuisine, <strong>une passion de famille</strong>. Nous mettons à l'honneur des recettes
+              authentiques, préparées avec des ingrédients frais et rigoureusement sélectionnés.
+            </p>
+            <p>
+              Que ce soit pour sublimer vos événements ou pour accompagner votre quotidien avec nos douceurs et
+              condiments faits maison, nous nous engageons à vous offrir une explosion de saveurs uniques.
+            </p>
+            <p class="signature">Alagou Nanie : Découvrez une autre Saveur !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- NOS UNIVERS -->
+    <section class="universes-section">
+      <div class="container">
+        <div class="universes-header animate-on-scroll">
+          <div class="section-label" style="justify-content: center;">Nos Univers</div>
+          <h2 class="section-title" style="text-align: center;">Trois façons de savourer <span class="gold-text">ALAGOU
+              NANIE</span>
+          </h2>
+          <p class="section-subtitle" style="text-align: center;">Du buffet d’exception à la maison jusqu'aux petits
+            plaisirs croustillants à grignoter, notre savoir-faire se décline pour toutes les occasions. Laissez-vous
+            guider par l'authenticité de nos recettes et choisissez l'expérience qui vous donne envie.</p>
+        </div>
+        <div class="universes-grid">
+          <!-- Card 1: Traiteur -->
+          <div class="universe-card animate-on-scroll delay-1" onclick="navigateTo('traiteur')">
+            <img src="images/traiteur_banner.png" alt="Service Traiteur ALAGOU NANIE" loading="lazy">
+            <div class="universe-card-overlay">
+              <h3>Service Traiteur</h3>
+              <p>Pour tous vos événements, nous créons des menus sur mesure qui émerveilleront vos invités.</p>
+              <span class="card-link">En savoir plus <span>→</span></span>
+            </div>
+          </div>
+          <!-- Card 2: Épicerie -->
+          <div class="universe-card animate-on-scroll delay-2" onclick="navigateTo('epices')">
+            <img src="images/epices_banner.png" alt="Épicerie & Fridòdòy ALAGOU NANIE" loading="lazy">
+            <div class="universe-card-overlay">
+              <h3>L'Épicerie</h3>
+              <p>Relevez vos plats au quotidien et retrouvez le piquant de nos sauces et l'authenticité de nos épices
+                blender directement chez vous.</p>
+              <span class="card-link">Épicerie <span>→</span></span>
+            </div>
+          </div>
+          <!-- Card 3: Fridòdòy -->
+          <div class="universe-card animate-on-scroll delay-2" onclick="navigateTo('fridodoy')">
+            <img src="images/fridodoy_banner.png" alt="Épicerie & Fridòdòy ALAGOU NANIE" loading="lazy">
+            <div class="universe-card-overlay">
+              <h3>Fridòdòy</h3>
+              <p>Retrouvez le croustillant de nos chips artisanales et la douceur de nos gâteaux traditionnels pour
+                toutes vos petites faims.</p>
+              <span class="card-link">Fridòdòy <span>→</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ PAGE 2: SERVICE TRAITEUR ============ -->
+  <div class="page" id="page-traiteur">
+
+    <!-- BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-bg">
+        <img src="images/traiteur_banner.png" alt="Table d'événement ALAGOU NANIE" loading="lazy">
+      </div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <div class="section-label" style="justify-content: center; color: var(--color-gold-light);">Service Traiteur
+        </div>
+        <h1>Vos événements <span class="gold-text">sur mesure</span></h1>
+        <p class="banner-subtitle">Du cocktail dînatoire au grand banquet, ALAGOU NANIE s'occupe de tout.</p>
+      </div>
+    </section>
+
+    <!-- NOS PRESTATIONS -->
+    <section class="prestations-section">
+      <div class="container">
+        <div class="prestations-intro animate-on-scroll">
+          <div class="section-label" style="justify-content: center;">Nos Prestations</div>
+          <h2 class="section-title" style="text-align: center;">Une expérience culinaire <span
+              class="gold-text">mémorable</span></h2>
+          <p class="section-subtitle" style="text-align: center;">Nous adaptons notre savoir-faire à toutes les
+            occasions pour vous offrir des moments inoubliables.</p>
+        </div>
+        <div class="prestations-grid">
+          <div class="prestation-card animate-on-scroll delay-1">
+            <div class="prestation-icon"><img src="images/house_10710321.png" alt="Événements privés" loading="lazy">
+            </div>
+            <h3>Événements Privés</h3>
+            <p>Mariages, anniversaires, fêtes de famille... Nous transformons vos célébrations en festins mémorables
+              avec des menus pensés pour chaque occasion.</p>
+          </div>
+          <div class="prestation-card animate-on-scroll delay-2">
+            <div class="prestation-icon"><img src="images/building_2807697.png" alt="Événements professionnels"
+                loading="lazy"></div>
+            <h3>Événements Professionnels</h3>
+            <p>Séminaires, lunch box d'entreprise, lancements de produits. Une cuisine raffinée pour impressionner vos
+              collaborateurs et partenaires.</p>
+          </div>
+          <div class="prestation-card animate-on-scroll delay-3">
+            <div class="prestation-icon"><img src="images/drink_14066456.png" alt="Cocktails et buffets" loading="lazy">
+            </div>
+            <h3>Cocktails &amp; Buffets</h3>
+            <p>Assortiments de pièces salées et sucrées, finger food créative. Un service élégant adapté à toutes les
+              formules et tous les budgets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid">
+          <div class="gallery-item animate-on-scroll">
+            <img src="images/traiteur_service.png" alt="Service traiteur professionnel" loading="lazy">
+          </div>
+          <div class="gallery-item animate-on-scroll delay-1">
+            <img src="images/hero_buffet.png" alt="Buffet traiteur coloré" loading="lazy">
+          </div>
+          <div class="gallery-item animate-on-scroll delay-2">
+            <img src="images/about_hands.png" alt="Préparation artisanale" loading="lazy">
+          </div>
+          <div class="gallery-item animate-on-scroll delay-3">
+            <img src="images/traiteur_banner.png" alt="Événement élégant" loading="lazy">
+          </div>
+          <div class="gallery-item animate-on-scroll delay-4">
+            <img src="images/hero_buffet.png" alt="Buffet traiteur coloré" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POURQUOI NOUS CHOISIR -->
+    <section class="why-section">
+      <div class="container">
+        <div class="animate-on-scroll" style="text-align: center;">
+          <div class="section-label" style="justify-content: center;">Pourquoi nous choisir</div>
+          <h2 class="section-title" style="text-align: center;">Notre <span class="gold-text">engagement</span> qualité
+          </h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card animate-on-scroll delay-1">
+            <div class="why-number">01</div>
+            <h3>Produits Frais</h3>
+            <p>Tout est cuisiné à la commande avec des ingrédients frais et rigoureusement sélectionnés pour garantir
+              une qualité irréprochable.</p>
+          </div>
+          <div class="why-card animate-on-scroll delay-2">
+            <div class="why-number">02</div>
+            <h3>Sur-mesure</h3>
+            <p>Des menus adaptés à vos goûts, vos envies et vos restrictions alimentaires. Chaque événement est unique,
+              votre menu l'est aussi.</p>
+          </div>
+          <div class="why-card animate-on-scroll delay-3">
+            <div class="why-number">03</div>
+            <h3>Savoir-faire</h3>
+            <p>Une présentation soignée et un goût authentique, fruit d'une passion familiale transmise de génération en
+              génération.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container animate-on-scroll">
+        <h2>Un événement en vue ?<br><span class="gold-text">Discutons-en ensemble !</span></h2>
+        <p>Confiez-nous votre projet et recevez un devis personnalisé dans les plus brefs délais.</p>
+        <button class="btn btn-primary" onclick="scrollToFooter()">
+          Demander un devis gratuit
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ PAGE 3: ÉPICES / SAUCES ============ -->
+  <div class="page" id="page-epices">
+
+    <!-- BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-bg">
+        <img src="images/epices_banner.png" alt="Épices et sauces ALAGOU NANIE" loading="lazy">
+      </div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <div class="section-label" style="justify-content: center; color: var(--color-gold-light);">L'Épicerie</div>
+        <h1>Les Secrets de notre <span class="gold-text">Cuisine</span></h1>
+        <p class="banner-subtitle">Relevez vos plats avec nos bases prêtes à l'emploi, 100% naturelles.</p>
+      </div>
+    </section>
+
+    <!-- CATALOGUE ÉPICERIE -->
+    <section class="products-section">
+      <div class="container">
+
+        <!-- Produit 1: Épices Blender -->
+        <div class="product-showcase animate-on-scroll">
+          <div class="product-image-wrapper">
+            <img src="images/epices_banner.png" alt="Épices Blender ALAGOU NANIE" loading="lazy">
+            <span class="product-badge">100% Naturel</span>
+          </div>
+          <div class="product-info">
+            <!-- <div class="section-label">Indispensable</div> -->
+            <h3>Épices Blender</h3>
+            <p>Notre fameux mélange d'aromates frais mixés, prêt à l'emploi. La base parfaite pour mariner vos viandes,
+              poissons, ou parfumer vos riz et ragoûts en un clin d'œil.</p>
+            <ul class="product-features">
+              <li>Aromates frais rigoureusement sélectionnés</li>
+              <li>Prêt à l'emploi, gain de temps assuré</li>
+              <li>Sans conservateurs ni additifs</li>
+              <li>Idéal pour marinades, riz et ragoûts</li>
+            </ul>
+            <button class="btn btn-primary" onclick="scrollToFooter()">
+              Commander
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="section-divider" style="margin: var(--space-4xl) 0;"></div>
+
+        <!-- Produit 2: Sauce Piquante -->
+        <div class="product-showcase reverse animate-on-scroll">
+          <div class="product-image-wrapper">
+            <img src="images/sauce.jpg" alt="Sauce Piquante ALAGOU NANIE" loading="lazy">
+            <span class="product-badge">Fait Maison</span>
+          </div>
+          <div class="product-info">
+            <!-- <div class="section-label">Signature</div> -->
+            <h3>Sauce Piquante</h3>
+            <p>Une sauce au piment soigneusement dosée, qui apporte du caractère et du relief à tous vos plats sans en
+              masquer les saveurs. Pour les amateurs de sensations vraies !</p>
+            <ul class="product-features">
+              <li>Piment soigneusement dosé et équilibré</li>
+              <li>Rehausse sans masquer les saveurs</li>
+              <li>Recette artisanale traditionnelle</li>
+              <li>Accompagne viandes, poissons et légumes</li>
+            </ul>
+            <button class="btn btn-primary" onclick="scrollToFooter()">
+              Commander
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container animate-on-scroll">
+        <h2>Envie de goûter à l'<span class="gold-text">authentique</span> ?</h2>
+        <p>Passez commande et relevez vos plats avec nos condiments artisanaux.</p>
+        <button class="btn btn-primary" onclick="scrollToFooter()">
+          Passer commande
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ PAGE 4: FRIDÒDÒY ============ -->
+  <div class="page" id="page-fridodoy">
+
+    <!-- BANNER -->
+    <section class="page-banner">
+      <div class="page-banner-bg">
+        <img src="images/fridodoy_banner.png" alt="Assortiment Fridòdòy ALAGOU NANIE" loading="lazy">
+      </div>
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <div class="section-label" style="justify-content: center; color: var(--color-gold-light);">Snacks & Douceurs
+        </div>
+        <h1>Le Coin <span class="gold-text">Fridòdòy</span></h1>
+        <p class="banner-subtitle">Craquants, fondants et irrésistibles : nos snacks salés et douceurs sucrées à
+          grignoter à tout moment.</p>
+      </div>
+    </section>
+
+    <!-- LE CROUSTILLANT & LE SALÉ -->
+    <section class="fridodoy-section">
+      <div class="container">
+        <div class="fridodoy-category">
+          <div class="category-header animate-on-scroll">
+            <div class="section-label" style="justify-content: center;">Le Croustillant & Le Salé</div>
+            <h2 class="section-title" style="text-align: center;">Nos <span class="gold-text">incontournables</span>
+              salés</h2>
+          </div>
+          <div class="snack-grid two-cols">
+            <!-- Chips Artisanales -->
+            <div class="snack-card animate-on-scroll delay-1">
+              <div class="snack-card-image">
+                <img src="images/fridodoy_banner.png" alt="Chips Artisanales" loading="lazy">
+                <!-- <span class="snack-badge">Artisanal</span> -->
+              </div>
+              <div class="snack-card-body">
+                <h3>Nos Chips Artisanales : Banane, Pomme de terre & Patate douce</h3>
+                <p>Fines, croustillantes et dorées à la perfection. Un snack irrésistible préparé avec des produits
+                  frais et locaux.</p>
+                <!-- <div class="varieties">
+                  <span class="variety-tag">Banane pesée</span>
+                  <span class="variety-tag">Banane pays</span>
+                  <span class="variety-tag">Pomme de terre</span>
+                  <span class="variety-tag">Patate douce</span>
+                </div> -->
+              </div>
+            </div>
+            <!-- Mini Pizza -->
+            <div class="snack-card animate-on-scroll delay-2">
+              <div class="snack-card-image">
+                <img src="images/mini_pizza.webp" alt="Mini Pizza ALAGOU NANIE" loading="lazy">
+                <!-- <span class="snack-badge">Fait Maison</span> -->
+              </div>
+              <div class="snack-card-body">
+                <h3>Mini Pizza</h3>
+                <p>Une pâte moelleuse, une sauce tomate maison savoureuse et une garniture généreuse. Le format parfait
+                  pour les apéritifs ou les petites faims.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-divider" style="margin: var(--space-4xl) 0;"></div>
+
+        <!-- LES DOUCEURS TRADITIONNELLES -->
+        <div class="fridodoy-category">
+          <div class="category-header animate-on-scroll">
+            <div class="section-label" style="justify-content: center;">Les Douceurs Traditionnelles</div>
+            <h2 class="section-title" style="text-align: center;">Nos <span class="gold-text">gourmandises</span>
+              sucrées</h2>
+          </div>
+          <div class="snack-grid">
+            <!-- Pain Patate -->
+            <div class="snack-card animate-on-scroll delay-1">
+              <div class="snack-card-image">
+                <img src="images/pain_patate.webp" alt="Pain Patate" loading="lazy">
+                <!-- <span class="snack-badge">Notre Fierté</span> -->
+              </div>
+              <div class="snack-card-body">
+                <h3>Pain Patate</h3>
+                <p>Notre fierté. Un gâteau de patate douce lourd, riche en épices (cannelle, muscade), coco et vanille,
+                  fondant en bouche comme le veut la tradition.</p>
+              </div>
+            </div>
+            <!-- Chanmchanm -->
+            <div class="snack-card animate-on-scroll delay-2">
+              <div class="snack-card-image">
+                <img src="images/chanmchanm.webp" alt="chanmchanm" loading="lazy">
+                <!-- <span class="snack-badge">Tradition</span> -->
+              </div>
+              <div class="snack-card-body">
+                <h3>Chanmchanm</h3>
+                <p>Le goût de l'enfance. Un délicieux mélange traditionnel de maïs torréfié et moulu, finement sucré et
+                  épicé. Un vrai voyage dans le temps.</p>
+              </div>
+            </div>
+            <!-- Mini Gâteau -->
+            <div class="snack-card animate-on-scroll delay-3">
+              <div class="snack-card-image">
+                <img src="images/gateau.webp" alt="Mini Gâteau" loading="lazy">
+                <!-- <span class="snack-badge">Gourmand</span> -->
+              </div>
+              <div class="snack-card-body">
+                <h3>Mini Gâteau</h3>
+                <p>De petites douceurs moelleuses et parfumées, idéales pour accompagner votre thé, café ou pour gâter
+                  vos invités.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container animate-on-scroll">
+        <h2>Envie d'une <span class="gold-text">douceur</span> ?</h2>
+        <p>Commandez nos snacks et gâteaux traditionnels, livrés chez vous.</p>
+        <button class="btn btn-primary" onclick="scrollToFooter()">
+          Commander maintenant
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ FOOTER (COMMUN) ============ -->
+  <footer class="footer" id="contact-section">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonne 1: À propos -->
+        <div class="footer-col footer-about">
+          <h4>À propos</h4>
+          <p><strong>ALAGOU NANIE</strong> – Service traiteur & Produits artisanaux. Le goût authentique fait
+            maison.</p>
+          <p>Nous mettons à l'honneur des recettes authentiques, préparées avec des ingrédients frais pour sublimer vos
+            événements et votre quotidien.</p>
+          <div class="footer-social">
+            <!-- <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a> -->
+            <a href="https://wa.me/50948548301" aria-label="WhatsApp" title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne 2: Contactez-nous -->
+        <div class="footer-col">
+          <h4>Contactez-nous</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">
+                <svg viewBox="140 140 220 220" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M250,149.1c-55.8,0-100.9,45.2-100.9,100.9 c0,55.7,45.2,100.9,100.9,100.9c55.8,0,100.9-45.2,100.9-100.9C350.9,194.2,305.8,149.1,250,149.1z M311.7,295.7l-6.3,6.3 c-10.7,10.7-27.9,10.7-38.6,0c-12.3-10.7-24.2-21.8-35.7-33.3c-11.5-11.5-22.6-23.4-33.3-35.7c-5.3-5.3-8-12.3-8-19.3 c0-7,2.7-14,8-19.3l6.3-6.3c4.7-4.7,12.2-4.7,16.9,0l16.8,16.8c2.7,2.7,2.7,7,0,9.6l-5.1,5.2c-3.3,3.3-3.3,8.7,0,12 c11,12.6,22.8,24.4,35.4,35.4c1.7,1.7,3.8,2.5,6,2.5c2.2,0,4.4-0.8,6-2.5l5.2-5.2c2.7-2.7,7-2.7,9.6,0l16.8,16.8 C316.4,283.5,316.4,291,311.7,295.7z" />
+                </svg>
+              </span>
+              <span>+509 48 54 8301</span>
+            </li>
+            <li>
+              <span class="contact-icon">
+                <svg viewBox="140 140 220 220" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M250,149.1c-55.8,0-100.9,45.2-100.9,100.9 c0,55.8,45.2,100.9,100.9,100.9S350.9,305.8,350.9,250C350.9,194.2,305.8,149.1,250,149.1z M195.8,204.2h108.6 c2.7,0,3.9,3.2,1.8,4.8l-47.3,36c-5.3,4-12.9,4-18.2,0L194,209C191.9,207.4,193.1,204.2,195.8,204.2z M307.6,288.8 c0,4.9-4.3,9-9.6,9h-95.9c-5.3,0-9.6-4-9.6-9v-70.7c0-1.2,1.5-1.8,2.4-1l35.5,33l-24.1,30.8c-0.8,0.9,0.5,2.1,1.5,1.4l31.6-26.9 c3.1,1.8,6.6,2.8,10.3,2.8c3.6,0,7.1-0.9,10.1-2.7l31.5,26.8c1,0.8,2.3-0.4,1.5-1.4L269,250.2l36.3-33.2c0.9-0.8,2.4-0.2,2.4,1 V288.8z" />
+                </svg>
+              </span>
+              <span>alagounanie@gmail.com</span>
+            </li>
+            <li>
+              <span class="contact-icon">
+                <svg viewBox="140 140 220 220" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M269,226.9c0,10-7.5,18.2-17.2,19.4 c-0.8,0.1-1.5,0.1-2.3,0.1c-0.8,0-1.6,0-2.3-0.1c-9.7-1.2-17.2-9.4-17.2-19.4c0-10.8,8.7-19.5,19.5-19.5 C260.2,207.4,269,216.1,269,226.9z M350.9,250c0,55.8-45.2,100.9-100.9,100.9c-55.8,0-100.9-45.2-100.9-100.9 c0-55.8,45.2-100.9,100.9-100.9C305.8,149.1,350.9,194.2,350.9,250z M293.1,226.9c0-24.1-19.5-43.6-43.6-43.6 c-24.1,0-43.6,19.5-43.6,43.6c0,7,1.6,13.5,4.5,19.4l34.7,70.9c1.9,3.8,7.3,3.8,9.1,0l34.4-70.9 C291.5,240.4,293.1,233.8,293.1,226.9z" />
+                </svg>
+              </span>
+              <span>Petion-ville, Routes freres, Peguy-ville, Delmas <br>Livraison disponible sur demande</span>
+            </li>
+            <li>
+              <span class="contact-icon">
+                <svg viewBox="140 140 220 220" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M250,149c-55.8,0-101,45.2-101,101s45.2,101,101,101s101-45.2,101-101S305.8,149,250,149z M289,302.1 l-51.9-51.9l0.1-0.1h-0.1V195h16v48.5l47.3,47.3L289,302.1z" />
+                </svg>
+              </span>
+              <span>Lun – Sam : 8h – 18h<br>Commandes sur réservation</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3: Formulaire -->
+        <div class="footer-col">
+          <h4>Commande & Devis</h4>
+          <form class="footer-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Votre nom" required id="form-name">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Votre e-mail" required id="form-email">
+              </div>
+            </div>
+            <div class="form-group">
+              <select name="subject" required id="form-subject">
+                <option value="" disabled selected>Sujet de votre message</option>
+                <option value="commande">Commande de produit</option>
+                <option value="devis">Demande de devis traiteur</option>
+                <option value="info">Demande d'information</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Votre message..." rows="4" required id="form-message"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="form-submit">
+              Envoyer le message →
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="#" onclick="navigateTo('accueil')">ALAGOU NANIE</a>. Tous droits réservés. Design by
+          JUST ART.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
