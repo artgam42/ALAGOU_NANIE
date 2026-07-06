@@ -857,17 +857,19 @@ a {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  margin-bottom: var(--space-lg);
+  line-height: 1.1;
+  max-width: 850px;
+  margin: 0 auto var(--space-xl);
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .page-banner-content .banner-subtitle {
   font-family: var(--font-accent);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #FFFFFF;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.8;
+  max-width: 850px;
+  margin-bottom: var(--space-2xl);
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
@@ -1684,6 +1686,16 @@ a {
   .page-banner {
     height: 50vh;
     min-height: 350px;
+  }
+
+  .page-banner-content h1 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  max-width: 100%;
+  padding: 0 var(--space-lg);
+}
+
+  .page-banner-content .banner-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
   }
 
   .gallery-grid {
